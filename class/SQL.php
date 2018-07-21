@@ -9,6 +9,10 @@ class Sql extends PDO {
 		$this->conn = new PDO('mysql:host=localhost;dbname=dbphp7','root','0000');
 	}
 
+	public function __destruct(){
+		unset($conn);
+	}
+
 	private function setParams(PDOStatement $statement, array $parameters){
 
 		foreach ($parameters as $key=>$value){
