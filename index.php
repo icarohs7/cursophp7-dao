@@ -34,8 +34,11 @@ require_once 'config.php';
 // $usuario->update('professor', '!@#$%¨&*');
 // echo $usuario;
 
-$usuario = Usuario::loadById(7);
-$usuario->delete();
-echo $usuario;
+//Deletar um usuário
+// $usuario = Usuario::loadById(7);
+// $usuario->delete();
+// echo $usuario;
+
+echo json_encode(Usuario::getList());
 
 ?>
